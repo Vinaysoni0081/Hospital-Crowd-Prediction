@@ -117,11 +117,10 @@ Because queue length is directly used to define the target, perfect classificati
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Vinaysoni0081/Hospital-Crowd-Prediction.git<YOUR_GITHUB_REPOSITORY_URL>
 cd Hospital-Crowd-Prediction
 ```
 
-Replace the placeholder with your repository URL after creating it on GitHub.
 
 ### 2. Create and activate a virtual environment
 
@@ -191,6 +190,6 @@ Author
 
 Vinay Soni
 
-GitHub: <YOUR_GITHUB_USERNAME>
+GitHub: Vinaysoni0081
 
 LinkedIn: https://www.linkedin.com/in/vinay-soni-3769b8303/
