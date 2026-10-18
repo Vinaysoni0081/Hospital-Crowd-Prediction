@@ -1,0 +1,45 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local environment settings
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary and log files
+*.log
+*.tmp
+
+# Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# Local backups
+*.bak
+*.old
+
+# Empty legacy duplicate files
+/app.py
+/static/script.js
+/static/style.css
+/templates/dashboard.html
+/templates/index.html
+/models/waiting_model.pkl

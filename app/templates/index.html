@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Crowd Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Hospital Crowd Prediction System</h1>
+        <p>Estimate patient waiting time and hospital crowd level.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Patient & Hospital Details</h2>
+
+            <form id="prediction-form">
+                <label for="appointment-date">Appointment Date</label>
+                <input type="date" id="appointment-date" required>
+
+                <label for="appointment-time">Appointment Time</label>
+                <input type="time" id="appointment-time" required>
+
+                <label for="arrival-time">Arrival Time</label>
+                <input type="time" id="arrival-time" required>
+
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select department</option>
+                    <option>Cardiology</option>
+                    <option>Dermatology</option>
+                    <option>ENT</option>
+                    <option>General Medicine</option>
+                    <option>Gynecology</option>
+                    <option>Neurology</option>
+                    <option>Orthopedics</option>
+                    <option>Pediatrics</option>
+                </select>
+
+                <label for="patient-type">Patient Type</label>
+                <select id="patient-type" required>
+                    <option value="">Select patient type</option>
+                    <option>New</option>
+                    <option>Returning</option>
+                </select>
+
+                <label for="queue-length">Queue Length (1–27)</label>
+                <input type="number" id="queue-length" min="1" max="27" step="1" required>
+
+                <label for="doctors-available">Doctors Available (1–5)</label>
+                <input type="number" id="doctors-available" min="1" max="5" step="1" required>
+
+                <label for="appointments-count">Appointments Count (8–48)</label>
+                <input type="number" id="appointments-count" min="8" max="48" step="1" required>
+
+                <label for="consultation-duration">Consultation Duration (10–30 minutes)</label>
+                <input type="number" id="consultation-duration" min="10" max="30" step="1" required>
+
+                <button type="submit">Predict Waiting Time & Crowd</button>
+            </form>
+
+            <p id="status-message" role="status"></p>
+
+            <section id="results" hidden>
+                <h2>Prediction Results</h2>
+                <p>Estimated Waiting Time: <strong id="waiting-result"></strong></p>
+                <p>Predicted Crowd Level: <strong id="crowd-result"></strong></p>
+                <p id="model-notice"></p>
+            </section>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
